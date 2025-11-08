@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Blog Post - Content Corner</title>
+    <script defer src="blog.js"></script>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="navbar">
+            <h2><a href="homepage.html">Content Corner</a></h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a id="avatar" class="avatar" href="profilepage.html">T</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <!-- Loading spinner -->
+        <div id="loading" class="loading-spinner" style="display: flex;">
+            <div class="spinner"></div>
+            <p>Loading blog...</p>
+        </div>
+
+        <!-- <div class="blog-container">
+            <article class="blog-post">
+                <div class="blog-header">
+                    <img src="blog-image.jpg" alt="Early Morning Concept" class="blog-image" />
+                </div>
+                <div class="blog-content">
+                    <h1 class="blog-title">Unlocking the Hidden Power of Early Mornings: A Life-Changing Habit</h1>
+                    <div class="author-info">
+                        <div class="author-details">
+                            <div class="author-avatar">T</div>
+                            <span class="author-name">Ashton Hall</span>
+                            <span class="post-date">May 22</span>
+                        </div>
+                    </div>
+                    <div class="content-divider"></div>
+                    <div class="blog-text">
+                        <p>There's something deeply powerful about being awake before the rest of the world opens its eyes. The early morning hours hold a kind of stillness that's hard to find at any other point in the day. For years, I thought I was a night
+                            owl. I did my work late at night, believing that the quiet of midnight was ideal for deep thinking. But once I forced myself to rise with the sun, everything changed.</p>
+                        <p>Early mornings are free from distraction. No emails are flooding your inbox, no messages are buzzing your phone. It's just you, your thoughts, and a few precious hours of uninterrupted clarity. The mind is rested and fresh — ready
+                            to absorb, reflect, and create.</p>
+                    </div>
+                </div>
+        </div> -->
+    </main>
+
+    <!-- Report Reason Modal -->
+    <div id="reportReasonModal" class="logoutmodal-overlay" style="display:none;">
+        <div class="logoutmodal-content">
+            <h2>Report Blog</h2>
+            <p>Please select a reason for reporting:</p>
+            <select id="reportReason" style="width: 100%; padding: 10px; margin: 15px 0; border-radius: 5px; border: 1px solid #ddd;">
+                <option value="">Select a reason...</option>
+            </select>
+            <textarea id="reportReasonText" placeholder="Please describe the issue in detail..." style="width: 100%; padding: 10px; margin: 15px 0; border-radius: 5px; border: 1px solid #ddd; min-height: 80px; font-family: inherit;"></textarea>
+            <button id="submitReportBtn">Submit Report</button>
+            <button id="cancelReportBtn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="logoutmodal-overlay" style="display:none;">
+        <div class="logoutmodal-content">
+            <h2 id="modalTitle">Success!</h2>
+            <p id="modalMessage">Your action was successful.</p>
+            <button id="modalOkBtn">OK</button>
+        </div>
+    </div>
+
+    <!-- Author Info Modal -->
+    <div id="authorModal" class="logoutmodal-overlay" style="display:none;">
+        <div class="logoutmodal-content author-modal-content">
+            <span class="modal-close" id="closeAuthorModal">&times;</span>
+            <div class="author-modal-header">
+                <div id="authorModalAvatar" class="author-modal-avatar"></div>
+                <h2 id="authorModalName" class="author-modal-name"></h2>
+            </div>
+            <div class="author-modal-body">
+                <h3 class="author-modal-section-title">About</h3>
+                <p id="authorModalDescription" class="author-modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

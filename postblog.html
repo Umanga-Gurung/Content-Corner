@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Name - Create Post</title>
+    <link rel="stylesheet" href="postblog.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="navbar">
+            <h2><a href="homepage.html">Content Corner</a></h2>
+            <nav>
+                <ul>
+                    <li> <button class="publish-btn">Publish</button></li>
+                    <li> <a id="avatar" class="avatar" href="profilepage.html">T</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container">
+        <main class="content">
+            <div class="input-section">
+                <div class="add-icon">
+                    <label for="image-upload" class="upload-label">
+                        <input type="file" id="image-upload" class="file-input" accept="image/*">
+                        <span class="upload-icon">+</span>
+                    </label>
+                    <div id="image-preview-container" style="margin-top:10px; display:none;">
+                        <img id="image-preview" src="" alt="Image Preview" style="max-width: 100%; max-height: 200px; border-radius: 8px;" />
+                    </div>
+                </div>
+                <div class="input-fields">
+                    <input type="text" class="title-input" placeholder="Title">
+                    <textarea class="description-input" placeholder="Description"></textarea>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="story-section">
+                <textarea class="story-input" placeholder="Tell your story..."></textarea>
+            </div>
+        </main>
+    </div>
+    <!-- Logout Modal -->
+    <div id="logoutModal" class="logoutmodal-overlay" style="display:none;">
+        <div class="logoutmodal-content">
+            <h2 id="logoutmodalTitle">Success!</h2>
+            <p id="logoutmodalMessage">You have signed up successfully.</p>
+            <button id="logoutmodalOkBtn">OK</button>
+            <button id="cancelBtn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModalBtn">&times;</span>
+            <h2 id="modalTitle">Success!</h2>
+            <p id="modalMessage">You have signed up successfully.</p>
+            <button id="modalOkBtn">OK</button>
+        </div>
+    </div>
+
+    <script src="postblog.js"></script>
+</body>
+
+</html>
