@@ -91,12 +91,16 @@ function renderBlogPost(blog) {
         `<img src="${currentUserProfilePic}" alt="${currentUsername}">` :
         currentUsername.charAt(0).toUpperCase();
 
+    // Conditionally include blog-header with image only if image exists
+    const blogImageHTML = blogImage ? `
+                <div class="blog-header">
+                    <img src="${blogImage}" alt="Blog Image" class="blog-image" />
+                </div>` : '';
+
     const HTML = `
     <div class="blog-container">
             <article class="blog-post">
-                <div class="blog-header">
-                    <img src="${blogImage}" alt="Early Morning Concept" class="blog-image" />
-                </div>
+                ${blogImageHTML}
                 <div class="blog-content">
                     <h1 class="blog-title">${blogTitle}</h1>
                     <div class="author-info">
